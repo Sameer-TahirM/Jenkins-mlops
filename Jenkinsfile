@@ -1,7 +1,8 @@
 pipeline {
     agent any
 
-        stage('Install dependancies') {
+    stages {
+        stage('Install dependencies') {
             steps {
                 script {
                     // Equivalent to 'install'
@@ -19,7 +20,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         success {
             // Add any post-success steps or notifications if needed
