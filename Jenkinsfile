@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu' // Use an Ubuntu image or any other Linux distribution
-        }
-    }
+    agent any
 
 
     
