@@ -1,20 +1,20 @@
 pipeline {
-    agent any
-
+    agent {
+        docker {
+            image 'ubuntu' // Use an Ubuntu image or any other Linux distribution
+        }
+    }
+    
     stages {
         stage('Install dependencies') {
             steps {
-                script {
-                    sh 'pip install -r requirements.txt'
-                }
+                sh 'pip install -r requirements.txt'
             }
         }
-
+        
         stage('Test with pytest') {
             steps {
-                script {
-                    sh 'pytest'
-                }
+                sh 'pytest'
             }
         }
     }
