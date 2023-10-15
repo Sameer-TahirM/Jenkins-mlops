@@ -1,5 +1,13 @@
 pipeline {
     agent any
+
+
+
+    environment {
+       PATH = "/usr/bin:$PATH"
+   }
+
+
     
     stages {
         stage('Install dependencies') {
