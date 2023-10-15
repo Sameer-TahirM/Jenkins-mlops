@@ -4,6 +4,8 @@ pipeline {
             image 'ubuntu' // Use an Ubuntu image or any other Linux distribution
         }
     }
+
+
     
     stages {
         stage('Install dependencies') {
@@ -11,6 +13,9 @@ pipeline {
                 sh 'pip install -r requirements.txt'
             }
         }
+
+
+
         
         stage('Test with pytest') {
             steps {
