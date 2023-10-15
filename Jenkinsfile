@@ -1,16 +1,6 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Checkout code') {
-            steps {
-                script {
-                    // Equivalent to 'actions/checkout@v2'
-                    checkout scm
-                }
-            }
-        }
-
         stage('Install dependancies') {
             steps {
                 script {
