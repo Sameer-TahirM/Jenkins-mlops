@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
-                bat 'pip install -r requirements.txt'
+                sh 'pip install -r requirements.txt'
             }
         }
 
@@ -21,7 +21,7 @@ pipeline {
      
         stage('Test with pytest') {
             steps {
-                bat 'pytest'
+                sh 'pytest'
             }
         }
     }
